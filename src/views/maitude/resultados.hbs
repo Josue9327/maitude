@@ -1,0 +1,47 @@
+<section id="hero">
+
+    <div class="container">
+        <div class="row mt-5" >
+            <div class="col-md-7">
+                <center><h1>Guardar Resultados</h1></center>
+                <br> <br>
+                <table class="table table-bordered table-hover">
+                    <thead>
+                        <tr>
+                          <th><center>Actividad</center> </th>
+                          <th> <center>Resultados</center></th>
+                        
+                        </tr>
+    
+                    </thead>
+                    <tbody>
+                   {{#each obj}}
+                       <tr>
+                           <td><center>Actividad No. : {{{actividad}}}</center> </td>
+                           <td><center>{{{puntaje}}}</center></td>
+                           
+                       </tr>
+                     {{/each}}
+                    </tbody>
+    
+                </table>
+    
+            </div>
+            
+            <div class="col-md-1" style="margin-left: 10px; margin-right: 5px;">
+            
+                
+                   <center>
+                       <br><br> <br><br> <br><br> 
+                    <form action="/generar_pdf" method="POST">
+                        <input type="hidden" value="4" name="resultado" >
+                        <input type="submit" value="Generar pdf"  class="btn-warning" style="width: 200px; height: 50px; margin-right: 12px;" > 
+                    </form>
+                   </center> 
+            
+            </div>
+        </div>
+    
+    </div>
+    <br><br><br><br><br>
+  </section><!-- End Hero -->

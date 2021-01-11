@@ -1,0 +1,68 @@
+<section id="hero">
+<br>
+<br>
+<br>
+
+    <div class="container">
+        <div class="row mt-5" >
+            <div class="col-md-7">
+                <br>
+                {{#if username.facebook}}
+                <table class="table table-bordered table-hover">
+                    <thead>
+                        <tr>
+                          <th><center>Nombre</center> </th>
+                          <th> <center>Usuario conectado con: </center></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    
+                       <tr>
+                           <td><center>{{{username.nombre_usuario}}}</center> </td>
+                           <td><center>Facebook</center></td>
+                       </tr>
+                    {{else}}
+                        <table class="table table-bordered table-hover">
+                    <thead>
+                        <tr>
+                          <th><center>Nombrs</center> </th>
+                          <th> <center>Apellidos</center></th>
+                          <th> <center>fecha de nacimiento</center></th>
+                          <th> <center>Correo</center></th>
+                          <th> <center>Acciones</center></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    
+                       <tr>
+                           <td><center>{{{username.nombre_usuario}}}</center> </td>
+                           <td><center>{{{username.apellidos_usuario}}}</center></td>
+                           <td><center>{{{username.fecha_usuario}}}</center></td>
+                           <td><center>{{{username.correo_usuario}}}</center></td>
+                           <td>
+                            <center><a href="editar" class="btn btn-info" >Editar</a><br>
+                               
+                           </td>
+
+                       </tr>
+
+                    {{/if}}
+    
+    
+                    </tbody>
+    
+                </table>
+    
+            </div>
+            
+            <div class="col-md-3" style="margin-left: 10px;">
+            
+                
+                   <center><img src="{{{username.foto}}}" alt="" width="300" height="300" style="margin-left: 10px;"></center> 
+            
+            </div>
+        </div>
+    
+    </div>
+    <br><br><br>
+  </section><!-- End Hero -->
